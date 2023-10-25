@@ -1,0 +1,66 @@
+<head>
+  <link rel="stylesheet" href="pages/cadastro/cadastro.css">
+</head>
+
+<body class="d-flex align-items-center py-4 bg-body-tertiary">
+  <img class="img-people-login" src="images/img.jpg" alt="People">
+  
+    <div class="formulario-cadastro">
+      <main class="form-signin w-100 m-auto">
+        <form class="form" name="formularioCadastro" ng-submit="cadastrarUsuario()">
+  
+          <img class="mb-4" src="" alt="" width="72" height="57">
+          
+          <h1 class="h3 mb-3 fw-normal">Faça seu cadastro</h1>
+
+          <div id="enter">
+
+            <div class="form-floating rounded">
+              <input type="text" class="form-control rounded" id="floatingName" placeholder="" ng-model="usuario.nome" ng-required="true">
+              <label for="floatingName">Nome</label>
+           </div>
+
+            <div class="form-floating mt-3 rounded">
+              <input type="text" class="form-control rounded" id="floatingLogin" placeholder="" ng-model="usuario.login" ng-required="true">
+              <label for="floatingLogin">Login</label>
+            </div>
+      
+              <div class="form-floating mt-3 rounded">
+                <input type="text" class="form-control rounded" id="floatingInput" placeholder="name@example.com" ng-model="usuario.email" ng-required="true">
+                <label for="floatingInput">Email</label>
+              </div>
+              
+              <div class="form-floating mt-3 rounded">
+                <input type="password" class="form-control rounded" id="floatingPassword" placeholder="Senha" ng-model="usuario.senha" ng-required="true">
+                <label for="floatingPassword">Senha</label>
+              </div>
+
+              <div class="form-floating mt-3 rounded">
+                <input type="password" class="form-control rounded" id="floatingPasswordConfirme" placeholder="Confirme sua Senha" ng-model="usuario.confirmeSenha" ng-required="true">
+                <label for="floatingPasswordConfirme">Confirme sua Senha</label>
+              </div>
+      
+              <div class="form-check text-start my-3">
+                <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Lembrar-me
+                </label>
+              </div>
+
+          </div>
+          
+          <button class="btn btn-bd-primary w-100 py-2" type="submit">Cadastrar</button>
+
+        </form>
+
+        <h6 class="voltar">Deseja voltar para tela de login?<a href="" ng-click="redirectToLogin()">
+          Clique aqui
+        </a>
+      </h6>
+
+     </main>
+    </div>
+    <div class="alert alert-danger" ng-show="message" style="position: fixed; top: 0; width: 100%; z-index: 100; text-align: center;">
+      {{message}}
+    </div>
+  </body>
